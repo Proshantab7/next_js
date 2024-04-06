@@ -19,8 +19,8 @@ const Home = () => {
 
   return (
     <div className="flex justify-around flex-wrap gap-y-6">
-      {product.map((item) => (
-        <div>
+      {product.map((item, index) => (
+        <div key={index}>
           <div className=" w-full h-[500px] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
               <Image
