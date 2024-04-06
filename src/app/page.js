@@ -15,8 +15,6 @@ const Home = () => {
     getData();
   }, []);
 
-  console.log(product);
-
   return (
     <div className="flex justify-around flex-wrap gap-y-6">
       {product.map((item, index) => (
@@ -24,6 +22,8 @@ const Home = () => {
           <div className=" w-full h-[500px] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
               <Image
+              priority={true}
+              quality={75}
                 className="p-8 rounded-xl w-[350px] h-[350px] object-cover"
                 src={item.thumbnail}
                 alt="product image"
